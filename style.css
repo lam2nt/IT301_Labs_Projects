@@ -1,0 +1,46 @@
+*{
+    padding:10px;
+    margin:0;
+}
+
+
+section{
+  margin: 20px 0;
+}
+
+ul{
+  padding-left: 40px;
+}
+
+ul ul ul {
+  margin-top: 10px;
+}
+
+/* Add style here */
+
+ul{
+  color:royalblue
+}
+
+ul>li:nth-child(2){
+  color:forestgreen;
+}
+
+ul>li:nth-child(3){
+  color:crimson;
+}
+
+ul>ul>li:nth-child(1){
+  color:violet;
+  background-color:lightgrey;
+}
+
+ul>ul>ul>li:nth-child(1){
+  color:darkorange;
+  background-color: beige;
+}
+
+ul>ul>li:nth-child(3){
+  color:violet;
+  background-color: lightgrey;
+}
