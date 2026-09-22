@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+        }
+
+
+        #leftPanel {
+            width: 80px;
+            flex: 0 0 80px;
+            height: 100vh;
+
+            background-color: orange;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        #leftPanel p {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 30px;
+
+            font-size: 28px;
+        }
+
+        #trashIcon {
+            font-size: 28px;
+        }
+        #rightPanel {
+            flex: 1;
+
+            height: 100vh;
+
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        #rightPanel img {
+            height: 100px;
+            width: auto;
+
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            object-fit: cover;
+
+            display: block;
+
+            border: 2px white solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="leftPanel">
+
+        <p>
+            <span>&#x1F4F7;</span>
+            <span>&#x1F5BC;&#xFE0F;</span>
+            <span>&#x2764;&#xFE0F;</span>
+        </p>
+
+        <div id="trashIcon">
+            &#x1F5D1;&#xFE0F;
+        </div>
+
+    </div>
+
+
+    <div id="rightPanel">
+
+        <img src="https://picsum.photos/371/100?random=1">
+        <img src="https://picsum.photos/184/100?random=2">
+        <img src="https://picsum.photos/293/100?random=3">
+        <img src="https://picsum.photos/126/100?random=4">
+        <img src="https://picsum.photos/347/100?random=5">
+        <img src="https://picsum.photos/218/100?random=6">
+
+        <img src="https://picsum.photos/398/100?random=7">
+        <img src="https://picsum.photos/157/100?random=8">
+        <img src="https://picsum.photos/266/100?random=9">
+        <img src="https://picsum.photos/112/100?random=10">
+        <img src="https://picsum.photos/329/100?random=11">
+        <img src="https://picsum.photos/241/100?random=12">
+
+        <img src="https://picsum.photos/386/100?random=13">
+        <img src="https://picsum.photos/173/100?random=14">
+        <img src="https://picsum.photos/304/100?random=15">
+        <img src="https://picsum.photos/139/100?random=16">
+        <img src="https://picsum.photos/357/100?random=17">
+        <img src="https://picsum.photos/225/100?random=18">
+
+        <img src="https://picsum.photos/392/100?random=19">
+        <img src="https://picsum.photos/165/100?random=20">
+        <img src="https://picsum.photos/278/100?random=21">
+        <img src="https://picsum.photos/121/100?random=22">
+        <img src="https://picsum.photos/336/100?random=23">
+        <img src="https://picsum.photos/252/100?random=24">
+
+        <img src="https://picsum.photos/341/100?random=25">
+        <img src="https://picsum.photos/231/100?random=26">
+        <img src="https://picsum.photos/312/100?random=27">
+        <img src="https://picsum.photos/212/100?random=28">
+        <img src="https://picsum.photos/380/100?random=29">
+        <img src="https://picsum.photos/181/100?random=30">
+
+    </div>
+
+</body>
+</html>
