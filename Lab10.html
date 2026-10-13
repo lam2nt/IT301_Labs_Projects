@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let total = prompt("Enter the total restaurant bill amount:");
+        let result = 0;
+
+        do {
+            if (total === "" || total === null || Number(total) === 0) {
+                total = prompt("Please enter a bill amount greater than zero.");
+            }
+
+            else if (Number(total) < 0) {
+                total = prompt("Negative amounts are not allowed. Please enter a valid bill amount.");
+            }
+
+            else if (isNaN(Number(total))) {
+                total = prompt("Invalid input. Please enter a numeric bill amount.");
+            }
+
+        } while (total === null || total === "" || isNaN(Number(total)) || Number(total) <= 0);
+
+        result = Number(total) * 0.1;
+
+        console.log(`For a bill of $${Number(total)}, the tip should be $${result}.`);
+
+        document.write(`For a bill of $${Number(total)}, the tip should be $${result}.`);
+    </script>
+</body>
+</html>
