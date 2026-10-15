@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Click Me!</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --page-bg: #ffffff;
+    --page-text: #1a1a1a;
+    --zone-border: #999999;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page-bg: #1b1d21;
+      --page-text: #f0f0f0;
+      --zone-border: #666666;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page-bg: #1b1d21;
+    --page-text: #f0f0f0;
+    --zone-border: #666666;
+    color-scheme: dark;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    padding: 24px;
+    background: var(--page-bg);
+    color: var(--page-text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  #btn {
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+    width: 260px;
+    height: 80px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #zone {
+    height: 75vh;
+    margin-top: 24px;
+    border: 2px dashed var(--zone-border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+  }
+</style>
+</head>
+<body>
+  <button id="btn">Click Me! 😊</button>
+  <div id="zone">Move your mouse around in this area 👀</div>
+
+  <script>
+    const btn = document.getElementById("btn");
+    const zone = document.getElementById("zone");
+
+    function setButton(text, bg, fg) {
+      btn.textContent = text;
+      btn.style.backgroundColor = bg;
+      btn.style.color = fg || "black";
+    }
+
+    btn.addEventListener("mouseover", () => setButton("Do not click! 😠", "yellow"));
+    btn.addEventListener("click", () => setButton("Ouch! 🤕", "red"));
+    btn.addEventListener("mouseleave", () => setButton("Phew! 😌", "lightgreen"));
+    btn.addEventListener("dblclick", () => setButton("Double trouble! 🤩", "pink"));
+    zone.addEventListener("mousemove", () => setButton("I see you! 👀", "lightblue"));
+  </script>
+</body>
+</html>
